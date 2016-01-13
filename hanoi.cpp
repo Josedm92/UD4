@@ -8,17 +8,17 @@ using namespace std; //Sentencia obligatoria.
 /*
  * @brief Módulo que calcula de forma iterativa y saca por pantalla los movimientos necesarios para completar una partida del juego Torres de Hanoi.
  * @param int fichas, int torreinicial, int torrefinal Número de fichas con las que se juegan, Posición inicial de la torre y posición en la que se desea termianr.
- * @return void no Devuelve nada puesto que saca los movimientos por pantalla en la propia función.
+ * @return void No devuelve nada puesto que saca los movimientos por pantalla en la propia función.
  * @pre fichas>1, torreinicial>=1&&<=3, torrefinal>=1&&<=3&&!torreinicial.
  * @ver 1.0.
  * @author Josedm92.
  */
 void Hanoi (int fichas, int torreinicial, int torrefinal){
     if (fichas==1) {
-		cout << "Mueve la ficha desde la torre " << torreinicial << " a la torre " << torrefinal << endl;
+		cout << "Mueve la ficha " << fichas << " desde la torre " << torreinicial << " a la torre " << torrefinal << endl;
 	} else {
 		Hanoi(fichas-1,torreinicial,6-torreinicial-torrefinal);
-		cout << "Mueve la ficha desde la torre " << torreinicial << " a la torre " << torrefinal << endl;
+		cout << "Mueve la ficha " << fichas << " desde la torre " << torreinicial << " a la torre " << torrefinal << endl;
 		Hanoi(fichas-1,6-torreinicial-torrefinal,torrefinal);
 	}
 }
@@ -59,4 +59,6 @@ int main () {
 	
 	//Llamamos a la función.
 	Hanoi(fichas,torreinicial,torrefinal);
+
+	cout << "\nJuego completado." << endl;
 }
