@@ -7,7 +7,7 @@ using namespace std; //Sentencia obligatoria.
 
 /*
  * @brief Módulo que calcula de forma iterativa y saca por pantalla los movimientos necesarios para completar una partida del juego Torres de Hanoi.
- * @param int fichas, int torreinicial, int torrefinal Número de fichas con las que se juegan, Posición inicial de la torre y posición en la que se desea termianr.
+ * @param int fichas, int torreinicial, int torrefinal Número de fichas con las que se juegan, Posición inicial de la torre y posición en la que se desea terminar.
  * @return void No devuelve nada puesto que saca los movimientos por pantalla en la propia función.
  * @pre fichas>1, torreinicial>=1&&<=3, torrefinal>=1&&<=3&&!torreinicial.
  * @ver 1.0.
